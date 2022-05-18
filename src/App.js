@@ -18,7 +18,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/addtask" element={<AddTask></AddTask>}></Route>
-        <Route path="/manageTask" element={<ManageTask></ManageTask>}></Route>
+        <Route path="/managetask" element={<ManageTask></ManageTask>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

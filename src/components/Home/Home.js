@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useUser from '../hooks/useUser';
 import User from '../User/User';
 
 const Home = () => {
-    const [users, setUsers] = useState([]);
+    const [users, setUsers] = useUser();
     const navigate = useNavigate();
-    useEffect( () => {
-        fetch('http://localhost:5000/user')
-        .then(res => res.json())
-        .then(data => setUsers(data));
-    },[])
 
     const navigateUser= () =>{
         navigate('/addtask')
