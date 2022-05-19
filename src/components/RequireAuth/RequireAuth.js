@@ -1,23 +1,22 @@
-// import React from 'react';
-// import { useAuthState } from 'react-firebase-hooks/auth';
-// import { Navigate, useLocation } from 'react-router-dom';
-// import auth from '../../firebase.init';
-// import Loading from '../Loading/Loading';
+import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Navigate, useLocation } from 'react-router-dom';
+import auth from '../../firebase.init';
 
-// const RequireAuth = ({children}) => {
-//     const [user, loading] = useAuthState(auth);
-//     const location = useLocation();
+const RequireAuth = ({children}) => {
+    const [user, loading] = useAuthState(auth);
+    const location = useLocation();
     
-//     if(loading){
-//       return <Loading></Loading>
-//     }
+    if(loading){
+      return <h4>Loading....</h4>
+    }
   
-//     if (!user) {
-//       return <Navigate to="/login" state={{from: location}} replace />;
-//     }
+    if (!user) {
+      return <Navigate to="/login" state={{from: location}} replace />;
+    }
 
 
-//   return children;
-// };
+  return children;
+};
 
-// export default RequireAuth;
+export default RequireAuth;

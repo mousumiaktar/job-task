@@ -6,7 +6,7 @@ const ManageAll = ({ user }) => {
     const handleDelete = id => {
         const proceed = window.confirm('are you Sure?');
         if(proceed){
-            fetch(`http://localhost:5000/user/${id}`,{
+            fetch(`https://to-do-list-server-site.herokuapp.com/user/${id}`,{
                 method: 'DELETE',
             })
             .then(res=> res.json())

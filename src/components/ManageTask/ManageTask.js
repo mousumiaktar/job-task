@@ -5,15 +5,8 @@ import ManageAll from '../ManageAll/ManageAll';
 const ManageTask = () => { 
     const [users, setUsers] = useUser();
 
-    const handleDelete = id => {
-        const proceed = window.confirm('are you Sure?');
-        if(proceed){
-
-        }
-    }
-
     return (
-        <div>
+        <div className='container'>
             <h2>TeamUsers: {users.length}</h2>
             <div className='row gy-5'>
                 {
